@@ -8,14 +8,14 @@ package mess
 
 import (
 	context "context"
-	reflect "reflect"
-	"strings"
-	sync "sync"
-
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status "google.golang.org/grpc/status"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	reflect "reflect"
+	sync "sync"
 )
 
 const (
@@ -191,13 +191,11 @@ type UpperServer interface {
 }
 
 // UnimplementedUpperServer can be embedded to have forward compatible implementations.
-type ImplementedUpperServer struct {
+type UnimplementedUpperServer struct {
 }
 
-func (*ImplementedUpperServer) Hello(c context.Context, u *User) (*User, error) {
-	return &User{
-		Str: strings.ToUpper(u.Str),
-	}, nil
+func (*UnimplementedUpperServer) Hello(context.Context, *User) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Hello not implemented")
 }
 
 func RegisterUpperServer(s *grpc.Server, srv UpperServer) {

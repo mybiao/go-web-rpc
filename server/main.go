@@ -10,7 +10,7 @@ import (
 
 func main() {
 	server := grpc.NewServer()
-	mess.RegisterUpperServer(server, &mess.ImplementedUpperServer{})
+	mess.RegisterUpperServer(server, &mess.ImplHelloUpperServer{})
 	lis, err := net.Listen("tcp", ":8000")
 	if err != nil {
 		log.Println(err)
