@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package mess;
+option go_package="mess";
+
+message User{
+    string str = 1;
+}
+
+service Upper{
+    rpc Hello (User) returns (User);
+}

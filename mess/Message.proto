@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+option go_package="mess";
+
+message Msg{
+  int64 id = 1; //消息id
+  string op = 2; //操作类型
+  Body body = 3;
+}
+
+message Body{
+  int32 able = 1;
+  repeated int32 ch = 2;
+  string mark = 3;
+  google.protobuf.Timestamp time = 4;
+}
