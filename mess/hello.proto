@@ -10,3 +10,33 @@ message User{
 service Upper{
     rpc Hello (User) returns (User);
 }
+
+message Request{
+    string companyId = 1;
+}
+
+message Response{
+    string companyId = 1;
+    string companyName = 2;
+    string address = 3;
+    string domain = 4;
+    bool enable = 5;
+}
+
+service Company{
+    rpc getCompany (Request) returns (Response);
+}
+
+message ReqData{ 
+    string data = 1;
+}
+
+message ResData{
+    string data = 1;
+}
+
+service MyStream{
+    rpc GetStream (ReqData) returns (stream ResData);
+    rpc PutStream (stream ReqData) returns (ResData);
+    rpc AllStream (stream ReqData) returns (stream ResData);
+}

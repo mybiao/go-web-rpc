@@ -1,10 +1,5 @@
 package main
 
-func main() {
-
-}
-
-/*
 import (
 	"fmt"
 	"log"
@@ -42,5 +37,3 @@ func main() {
 	fmt.Println(mm.Body.Ch)
 	fmt.Println(mm.Body)
 }
-
-*/

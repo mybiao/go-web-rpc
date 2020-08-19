@@ -76,16 +76,265 @@ func (x *User) GetStr() string {
 	return ""
 }
 
+type Request struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CompanyId string `protobuf:"bytes,1,opt,name=companyId,proto3" json:"companyId,omitempty"`
+}
+
+func (x *Request) Reset() {
+	*x = Request{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_mess_hello_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *Request) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Request) ProtoMessage() {}
+
+func (x *Request) ProtoReflect() protoreflect.Message {
+	mi := &file_mess_hello_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Request.ProtoReflect.Descriptor instead.
+func (*Request) Descriptor() ([]byte, []int) {
+	return file_mess_hello_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *Request) GetCompanyId() string {
+	if x != nil {
+		return x.CompanyId
+	}
+	return ""
+}
+
+type Response struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CompanyId   string `protobuf:"bytes,1,opt,name=companyId,proto3" json:"companyId,omitempty"`
+	CompanyName string `protobuf:"bytes,2,opt,name=companyName,proto3" json:"companyName,omitempty"`
+	Address     string `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty"`
+	Domain      string `protobuf:"bytes,4,opt,name=domain,proto3" json:"domain,omitempty"`
+	Enable      bool   `protobuf:"varint,5,opt,name=enable,proto3" json:"enable,omitempty"`
+}
+
+func (x *Response) Reset() {
+	*x = Response{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_mess_hello_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *Response) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Response) ProtoMessage() {}
+
+func (x *Response) ProtoReflect() protoreflect.Message {
+	mi := &file_mess_hello_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Response.ProtoReflect.Descriptor instead.
+func (*Response) Descriptor() ([]byte, []int) {
+	return file_mess_hello_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *Response) GetCompanyId() string {
+	if x != nil {
+		return x.CompanyId
+	}
+	return ""
+}
+
+func (x *Response) GetCompanyName() string {
+	if x != nil {
+		return x.CompanyName
+	}
+	return ""
+}
+
+func (x *Response) GetAddress() string {
+	if x != nil {
+		return x.Address
+	}
+	return ""
+}
+
+func (x *Response) GetDomain() string {
+	if x != nil {
+		return x.Domain
+	}
+	return ""
+}
+
+func (x *Response) GetEnable() bool {
+	if x != nil {
+		return x.Enable
+	}
+	return false
+}
+
+type ReqData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Data string `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
+}
+
+func (x *ReqData) Reset() {
+	*x = ReqData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_mess_hello_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqData) ProtoMessage() {}
+
+func (x *ReqData) ProtoReflect() protoreflect.Message {
+	mi := &file_mess_hello_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqData.ProtoReflect.Descriptor instead.
+func (*ReqData) Descriptor() ([]byte, []int) {
+	return file_mess_hello_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *ReqData) GetData() string {
+	if x != nil {
+		return x.Data
+	}
+	return ""
+}
+
+type ResData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Data string `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
+}
+
+func (x *ResData) Reset() {
+	*x = ResData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_mess_hello_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResData) ProtoMessage() {}
+
+func (x *ResData) ProtoReflect() protoreflect.Message {
+	mi := &file_mess_hello_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResData.ProtoReflect.Descriptor instead.
+func (*ResData) Descriptor() ([]byte, []int) {
+	return file_mess_hello_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *ResData) GetData() string {
+	if x != nil {
+		return x.Data
+	}
+	return ""
+}
+
 var File_mess_hello_proto protoreflect.FileDescriptor
 
 var file_mess_hello_proto_rawDesc = []byte{
 	0x0a, 0x10, 0x6d, 0x65, 0x73, 0x73, 0x2f, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x70, 0x72, 0x6f,
 	0x74, 0x6f, 0x12, 0x04, 0x6d, 0x65, 0x73, 0x73, 0x22, 0x18, 0x0a, 0x04, 0x55, 0x73, 0x65, 0x72,
 	0x12, 0x10, 0x0a, 0x03, 0x73, 0x74, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x73,
-	0x74, 0x72, 0x32, 0x28, 0x0a, 0x05, 0x55, 0x70, 0x70, 0x65, 0x72, 0x12, 0x1f, 0x0a, 0x05, 0x48,
-	0x65, 0x6c, 0x6c, 0x6f, 0x12, 0x0a, 0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e, 0x55, 0x73, 0x65, 0x72,
-	0x1a, 0x0a, 0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x42, 0x06, 0x5a, 0x04,
-	0x6d, 0x65, 0x73, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x72, 0x22, 0x27, 0x0a, 0x07, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1c, 0x0a,
+	0x09, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x09, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x49, 0x64, 0x22, 0x94, 0x01, 0x0a, 0x08,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x63, 0x6f, 0x6d,
+	0x70, 0x61, 0x6e, 0x79, 0x49, 0x64, 0x12, 0x20, 0x0a, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
+	0x79, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x6d,
+	0x70, 0x61, 0x6e, 0x79, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x61, 0x64, 0x64, 0x72,
+	0x65, 0x73, 0x73, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x61, 0x64, 0x64, 0x72, 0x65,
+	0x73, 0x73, 0x12, 0x16, 0x0a, 0x06, 0x64, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x18, 0x04, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x06, 0x64, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x12, 0x16, 0x0a, 0x06, 0x65, 0x6e,
+	0x61, 0x62, 0x6c, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x08, 0x52, 0x06, 0x65, 0x6e, 0x61, 0x62,
+	0x6c, 0x65, 0x22, 0x1d, 0x0a, 0x07, 0x52, 0x65, 0x71, 0x44, 0x61, 0x74, 0x61, 0x12, 0x12, 0x0a,
+	0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x61, 0x74,
+	0x61, 0x22, 0x1d, 0x0a, 0x07, 0x52, 0x65, 0x73, 0x44, 0x61, 0x74, 0x61, 0x12, 0x12, 0x0a, 0x04,
+	0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61,
+	0x32, 0x28, 0x0a, 0x05, 0x55, 0x70, 0x70, 0x65, 0x72, 0x12, 0x1f, 0x0a, 0x05, 0x48, 0x65, 0x6c,
+	0x6c, 0x6f, 0x12, 0x0a, 0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x1a, 0x0a,
+	0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x32, 0x36, 0x0a, 0x07, 0x43, 0x6f,
+	0x6d, 0x70, 0x61, 0x6e, 0x79, 0x12, 0x2b, 0x0a, 0x0a, 0x67, 0x65, 0x74, 0x43, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x12, 0x0d, 0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x0e, 0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x32, 0x93, 0x01, 0x0a, 0x08, 0x4d, 0x79, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x12,
+	0x2b, 0x0a, 0x09, 0x47, 0x65, 0x74, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x12, 0x0d, 0x2e, 0x6d,
+	0x65, 0x73, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x0d, 0x2e, 0x6d, 0x65,
+	0x73, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x44, 0x61, 0x74, 0x61, 0x30, 0x01, 0x12, 0x2b, 0x0a, 0x09,
+	0x50, 0x75, 0x74, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x12, 0x0d, 0x2e, 0x6d, 0x65, 0x73, 0x73,
+	0x2e, 0x52, 0x65, 0x71, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x0d, 0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e,
+	0x52, 0x65, 0x73, 0x44, 0x61, 0x74, 0x61, 0x28, 0x01, 0x12, 0x2d, 0x0a, 0x09, 0x41, 0x6c, 0x6c,
+	0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x12, 0x0d, 0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e, 0x52, 0x65,
+	0x71, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x0d, 0x2e, 0x6d, 0x65, 0x73, 0x73, 0x2e, 0x52, 0x65, 0x73,
+	0x44, 0x61, 0x74, 0x61, 0x28, 0x01, 0x30, 0x01, 0x42, 0x06, 0x5a, 0x04, 0x6d, 0x65, 0x73, 0x73,
+	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -100,15 +349,27 @@ func file_mess_hello_proto_rawDescGZIP() []byte {
 	return file_mess_hello_proto_rawDescData
 }
 
-var file_mess_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_mess_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_mess_hello_proto_goTypes = []interface{}{
-	(*User)(nil), // 0: mess.User
+	(*User)(nil),     // 0: mess.User
+	(*Request)(nil),  // 1: mess.Request
+	(*Response)(nil), // 2: mess.Response
+	(*ReqData)(nil),  // 3: mess.ReqData
+	(*ResData)(nil),  // 4: mess.ResData
 }
 var file_mess_hello_proto_depIdxs = []int32{
 	0, // 0: mess.Upper.Hello:input_type -> mess.User
-	0, // 1: mess.Upper.Hello:output_type -> mess.User
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
+	1, // 1: mess.Company.getCompany:input_type -> mess.Request
+	3, // 2: mess.MyStream.GetStream:input_type -> mess.ReqData
+	3, // 3: mess.MyStream.PutStream:input_type -> mess.ReqData
+	3, // 4: mess.MyStream.AllStream:input_type -> mess.ReqData
+	0, // 5: mess.Upper.Hello:output_type -> mess.User
+	2, // 6: mess.Company.getCompany:output_type -> mess.Response
+	4, // 7: mess.MyStream.GetStream:output_type -> mess.ResData
+	4, // 8: mess.MyStream.PutStream:output_type -> mess.ResData
+	4, // 9: mess.MyStream.AllStream:output_type -> mess.ResData
+	5, // [5:10] is the sub-list for method output_type
+	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -132,6 +393,54 @@ func file_mess_hello_proto_init() {
 				return nil
 			}
 		}
+		file_mess_hello_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Request); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_mess_hello_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Response); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_mess_hello_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_mess_hello_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -139,9 +448,9 @@ func file_mess_hello_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_mess_hello_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   1,
+			NumMessages:   5,
 			NumExtensions: 0,
-			NumServices:   1,
+			NumServices:   3,
 		},
 		GoTypes:           file_mess_hello_proto_goTypes,
 		DependencyIndexes: file_mess_hello_proto_depIdxs,
@@ -230,5 +539,314 @@ var _Upper_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
+	Metadata: "mess/hello.proto",
+}
+
+// CompanyClient is the client API for Company service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type CompanyClient interface {
+	GetCompany(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
+}
+
+type companyClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewCompanyClient(cc grpc.ClientConnInterface) CompanyClient {
+	return &companyClient{cc}
+}
+
+func (c *companyClient) GetCompany(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
+	out := new(Response)
+	err := c.cc.Invoke(ctx, "/mess.Company/getCompany", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// CompanyServer is the server API for Company service.
+type CompanyServer interface {
+	GetCompany(context.Context, *Request) (*Response, error)
+}
+
+// UnimplementedCompanyServer can be embedded to have forward compatible implementations.
+type UnimplementedCompanyServer struct {
+}
+
+func (*UnimplementedCompanyServer) GetCompany(context.Context, *Request) (*Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCompany not implemented")
+}
+
+func RegisterCompanyServer(s *grpc.Server, srv CompanyServer) {
+	s.RegisterService(&_Company_serviceDesc, srv)
+}
+
+func _Company_GetCompany_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CompanyServer).GetCompany(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/mess.Company/GetCompany",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CompanyServer).GetCompany(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _Company_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "mess.Company",
+	HandlerType: (*CompanyServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "getCompany",
+			Handler:    _Company_GetCompany_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "mess/hello.proto",
+}
+
+// MyStreamClient is the client API for MyStream service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type MyStreamClient interface {
+	GetStream(ctx context.Context, in *ReqData, opts ...grpc.CallOption) (MyStream_GetStreamClient, error)
+	PutStream(ctx context.Context, opts ...grpc.CallOption) (MyStream_PutStreamClient, error)
+	AllStream(ctx context.Context, opts ...grpc.CallOption) (MyStream_AllStreamClient, error)
+}
+
+type myStreamClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewMyStreamClient(cc grpc.ClientConnInterface) MyStreamClient {
+	return &myStreamClient{cc}
+}
+
+func (c *myStreamClient) GetStream(ctx context.Context, in *ReqData, opts ...grpc.CallOption) (MyStream_GetStreamClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_MyStream_serviceDesc.Streams[0], "/mess.MyStream/GetStream", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &myStreamGetStreamClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type MyStream_GetStreamClient interface {
+	Recv() (*ResData, error)
+	grpc.ClientStream
+}
+
+type myStreamGetStreamClient struct {
+	grpc.ClientStream
+}
+
+func (x *myStreamGetStreamClient) Recv() (*ResData, error) {
+	m := new(ResData)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func (c *myStreamClient) PutStream(ctx context.Context, opts ...grpc.CallOption) (MyStream_PutStreamClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_MyStream_serviceDesc.Streams[1], "/mess.MyStream/PutStream", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &myStreamPutStreamClient{stream}
+	return x, nil
+}
+
+type MyStream_PutStreamClient interface {
+	Send(*ReqData) error
+	CloseAndRecv() (*ResData, error)
+	grpc.ClientStream
+}
+
+type myStreamPutStreamClient struct {
+	grpc.ClientStream
+}
+
+func (x *myStreamPutStreamClient) Send(m *ReqData) error {
+	return x.ClientStream.SendMsg(m)
+}
+
+func (x *myStreamPutStreamClient) CloseAndRecv() (*ResData, error) {
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	m := new(ResData)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func (c *myStreamClient) AllStream(ctx context.Context, opts ...grpc.CallOption) (MyStream_AllStreamClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_MyStream_serviceDesc.Streams[2], "/mess.MyStream/AllStream", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &myStreamAllStreamClient{stream}
+	return x, nil
+}
+
+type MyStream_AllStreamClient interface {
+	Send(*ReqData) error
+	Recv() (*ResData, error)
+	grpc.ClientStream
+}
+
+type myStreamAllStreamClient struct {
+	grpc.ClientStream
+}
+
+func (x *myStreamAllStreamClient) Send(m *ReqData) error {
+	return x.ClientStream.SendMsg(m)
+}
+
+func (x *myStreamAllStreamClient) Recv() (*ResData, error) {
+	m := new(ResData)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+// MyStreamServer is the server API for MyStream service.
+type MyStreamServer interface {
+	GetStream(*ReqData, MyStream_GetStreamServer) error
+	PutStream(MyStream_PutStreamServer) error
+	AllStream(MyStream_AllStreamServer) error
+}
+
+// UnimplementedMyStreamServer can be embedded to have forward compatible implementations.
+type UnimplementedMyStreamServer struct {
+}
+
+func (*UnimplementedMyStreamServer) GetStream(*ReqData, MyStream_GetStreamServer) error {
+	return status.Errorf(codes.Unimplemented, "method GetStream not implemented")
+}
+func (*UnimplementedMyStreamServer) PutStream(MyStream_PutStreamServer) error {
+	return status.Errorf(codes.Unimplemented, "method PutStream not implemented")
+}
+func (*UnimplementedMyStreamServer) AllStream(MyStream_AllStreamServer) error {
+	return status.Errorf(codes.Unimplemented, "method AllStream not implemented")
+}
+
+func RegisterMyStreamServer(s *grpc.Server, srv MyStreamServer) {
+	s.RegisterService(&_MyStream_serviceDesc, srv)
+}
+
+func _MyStream_GetStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(ReqData)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(MyStreamServer).GetStream(m, &myStreamGetStreamServer{stream})
+}
+
+type MyStream_GetStreamServer interface {
+	Send(*ResData) error
+	grpc.ServerStream
+}
+
+type myStreamGetStreamServer struct {
+	grpc.ServerStream
+}
+
+func (x *myStreamGetStreamServer) Send(m *ResData) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func _MyStream_PutStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(MyStreamServer).PutStream(&myStreamPutStreamServer{stream})
+}
+
+type MyStream_PutStreamServer interface {
+	SendAndClose(*ResData) error
+	Recv() (*ReqData, error)
+	grpc.ServerStream
+}
+
+type myStreamPutStreamServer struct {
+	grpc.ServerStream
+}
+
+func (x *myStreamPutStreamServer) SendAndClose(m *ResData) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func (x *myStreamPutStreamServer) Recv() (*ReqData, error) {
+	m := new(ReqData)
+	if err := x.ServerStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func _MyStream_AllStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(MyStreamServer).AllStream(&myStreamAllStreamServer{stream})
+}
+
+type MyStream_AllStreamServer interface {
+	Send(*ResData) error
+	Recv() (*ReqData, error)
+	grpc.ServerStream
+}
+
+type myStreamAllStreamServer struct {
+	grpc.ServerStream
+}
+
+func (x *myStreamAllStreamServer) Send(m *ResData) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func (x *myStreamAllStreamServer) Recv() (*ReqData, error) {
+	m := new(ReqData)
+	if err := x.ServerStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+var _MyStream_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "mess.MyStream",
+	HandlerType: (*MyStreamServer)(nil),
+	Methods:     []grpc.MethodDesc{},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "GetStream",
+			Handler:       _MyStream_GetStream_Handler,
+			ServerStreams: true,
+		},
+		{
+			StreamName:    "PutStream",
+			Handler:       _MyStream_PutStream_Handler,
+			ClientStreams: true,
+		},
+		{
+			StreamName:    "AllStream",
+			Handler:       _MyStream_AllStream_Handler,
+			ServerStreams: true,
+			ClientStreams: true,
+		},
+	},
 	Metadata: "mess/hello.proto",
 }
