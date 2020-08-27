@@ -6,12 +6,16 @@ import (
 	"log"
 
 	"github.com/mybiao/test/mess"
-
+	zipkin "github.com/openzipkin/zipkin-go"
+	zipkingrpc "github.com/openzipkin/zipkin-go/middleware/grpc"
+	zipkinhttp "github.com/openzipkin/zipkin-go/reporter/http"
 	"google.golang.org/grpc"
 )
 
 func main() {
-	conn, err := grpc.Dial(":8000", grpc.WithInsecure())
+	reporter := zipkinhttp.NewReporter("http://abc.mybiao.top:9411/api/v2/spans")
+	tracer, _ := zipkin.NewTracer(reporter)
+	conn, err := grpc.Dial(":8000", grpc.WithInsecure(), grpc.WithStatsHandler(zipkingrpc.NewClientHandler(tracer)))
 	if err != nil {
 		log.Println(err)
 	}

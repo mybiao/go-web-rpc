@@ -7,11 +7,16 @@ import (
 	"time"
 
 	"github.com/mybiao/test/mess"
+	zipkin "github.com/openzipkin/zipkin-go"
+	zipkingrpc "github.com/openzipkin/zipkin-go/middleware/grpc"
+	zipkinhttp "github.com/openzipkin/zipkin-go/reporter/http"
 	"google.golang.org/grpc"
 )
 
 func main() {
-	server := grpc.NewServer()
+	reporter := zipkinhttp.NewReporter("http://abc.mybiao.top:9411/api/v2/spans")
+	tracer, _ := zipkin.NewTracer(reporter)
+	server := grpc.NewServer(grpc.StatsHandler(zipkingrpc.NewServerHandler(tracer)))
 	mess.RegisterUpperServer(server, &mess.ImplHelloUpperServer{})
 	mess.RegisterCompanyServer(server, &mess.ImplHelloUpperServer{})
 	mess.RegisterMyStreamServer(server, &mess.ImplHelloUpperServer{})
